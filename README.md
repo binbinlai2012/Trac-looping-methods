@@ -3,6 +3,7 @@ The method includes two parts: one is to identify significant interaction for on
 
 The package includes Python, R, and shell scripts and C++ codes that can be complied by:
 >cd src
+
 >make
 
 Scripts and executibles are all in directory bin/

@@ -2,7 +2,7 @@ CXX = g++
 CPPFLAGS = -O3
 LDFLAGS = -O3
 
-TARGET = ../bin/call_interaction_model ../bin/call_interaction ../bin/merge_sig_interaction ../bin/merge_tracloops ../bin/count_tag_on_region ../bin/get_petc_in_loop_from_bedpe ../bin/call_diff_loop
+TARGET = ../bin/call_interaction_model ../bin/call_interaction ../bin/merge_sig_interaction ../bin/merge_tracloops ../bin/count_tag_on_region ../bin/get_petc_in_loop_from_bedpe ../bin/call_diff_loop ../bin/filter_NR_bedpe
 OBJECTS = operation.o pet.o partition.o call_interaction_model.o call_interaction.o merge_sig_interaction.o 
 
 .PHONY : all
@@ -28,7 +28,9 @@ all : $(TARGET)
 	
 ../bin/call_diff_loop :
 	$(CXX) $(LDFLAGS) -o ../bin/call_diff_loop call_diff_loop.cpp
-	
+
+../bin/filter_NR_bedpe :
+	$(CXX) $(LDFLAGS) -o ../bin/filter_NR_bedpe filter_NR_bedpe.cpp
 
 operation.o :
 pet.o : operation.h

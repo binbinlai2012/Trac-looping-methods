@@ -316,10 +316,10 @@ void assign_pet_to_peak_pair( PET_bank & pet_bank,
 					bi != right_hit_peak.end(); ++bi )
 				{
 					peak_pair[chr].push_back( make_pair( *ai, *bi) );
-					if ( chr == "chr10" && *ai == tag1 && *bi == tag2 )
+				/*	if ( chr == "chr10" && *ai == tag1 && *bi == tag2 )
 					{
 						cout<<"Hit 1"<<endl;
-					}
+					}   */
 				}
 			}
 			ck += 1;
@@ -392,10 +392,10 @@ void assign_pet_to_peak_pair2( PET_bank & pet_bank,
 				rpm_c[logrpm] = 1;
 		}
 	}
-	ofstream outf( "tmp.rpm_dist.txt" );
+/*	ofstream outf( "tmp.rpm_dist.txt" );
 	for ( map<int, int >::iterator ite= rpm_c.begin(); ite != rpm_c.end(); ++ite )
 		outf<<ite->first<<"\t"<<ite->second<<endl;
-	outf.close();
+	outf.close();  */
 }
 
 void complete_dist_p( map<int, double > &dist_p, int skip )

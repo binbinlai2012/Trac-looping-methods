@@ -71,8 +71,8 @@ void Partition_Bank::ini_Partition_from_chrlen( string infile, int win )
 	for ( map<string, int >::iterator ite = chr_len.begin(); ite != chr_len.end(); ++ite )
 	{
 		string chr = ite->first;
-		if ( chr.find("_") != std::string::npos || chr == "chrM")
-			continue;
+	/*	if ( chr.find("_") != std::string::npos || chr == "chrM")
+			continue;   */
 		int l = ite->second;
 		int step = l / win;
 		cout<<chr<<" "<<l<<endl;
@@ -488,13 +488,13 @@ void Partition_Bank::add_partition_anchor_from_region( string infile )
 		string chr = ps[0];
 		int start = atoi( ps[1].c_str() );
 		int end = atoi(ps[2].c_str() );
-		if ( chr == "chrM" )
+	/*	if ( chr == "chrM" )
 			continue;
 		if ( chr_Par.find( chr ) == chr_Par.end() )
 		{
 			cout<<"Unknown chr "<<chr<<endl;
 			continue;
-		}
+		}  */
 		int p_start1 = (start / chr_Par[chr].win ) * chr_Par[chr].win;
 		int p_start2 = (end / chr_Par[chr].win ) * chr_Par[chr].win;
 		int id1 = p_start1 / chr_Par[chr].win;

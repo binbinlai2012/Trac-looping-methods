@@ -155,8 +155,8 @@ void assignpettoloop( vector< PET > &pet_ve, map<string, map<pair<int, int >, ma
 	
 	for ( size_t i = 0; i < pet_ve.size(); ++i )
 	{
-		if ( pet_ve[i].chr1 == "chrM" || pet_ve[i].chr2 == "chrM" )
-			continue;
+	//	if ( pet_ve[i].chr1 == "chrM" || pet_ve[i].chr2 == "chrM" )
+		//	continue;
 		if ( pet_ve[i].chr1 != pet_ve[i].chr2 )
 			continue;
 		if ( pet_ve[i].len <= minl || pet_ve[i].len > maxl )
